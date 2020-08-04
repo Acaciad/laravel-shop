@@ -20,5 +20,6 @@
     </div>
     <!-- JS 脚本 -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('scriptsAfterJs')
 </body>
 </html>
