@@ -7,6 +7,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\UserAddress;
 use App\Models\Product;
 use App\Models\CartItem;
+use App\Models\Order;
+use App\Models\Orderltem;
 class User extends Authenticatable
 {
     use Notifiable;
