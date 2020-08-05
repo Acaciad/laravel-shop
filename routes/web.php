@@ -22,3 +22,7 @@ Route::get('products/favorites', 'ProductsController@favorites')->name('products
 
 //商品详情显示
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+
+Route::post('cart', 'CartController@add')->name('cart.add');
+Route::get('cart', 'CartController@index')->name('cart.index');
+Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
