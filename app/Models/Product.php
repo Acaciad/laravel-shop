@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use APP\User;
+
 class Product extends Model
 {
     protected $fillable = [

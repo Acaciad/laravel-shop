@@ -49,4 +49,9 @@ class AddCartRequest extends FormRequest
             'sku_id.required' => '请选择商品'
         ];
     }
+
+    public function authorize()
+    {
+        return true;
+    }
 }
