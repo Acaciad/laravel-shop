@@ -8,6 +8,10 @@ use App\Models\ProductSku;
 
 class AddCartRequest extends FormRequest
 {
+      public function authorize()
+    {
+        return true;
+    }
     public function rules()
     {
         return [
@@ -50,8 +54,5 @@ class AddCartRequest extends FormRequest
         ];
     }
 
-    public function authorize()
-    {
-        return true;
-    }
+  
 }
