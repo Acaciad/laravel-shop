@@ -30,3 +30,11 @@ Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
 Route::post('orders', 'OrdersController@store')->name('orders.store');
 Route::get('orders', 'OrdersController@index')->name('orders.index');
 Route::get('orders/{order}', 'OrdersController@show')->name('orders.show');
+
+Route::get('alipay', function() {
+    return app('alipay')->web([
+        'out_trade_no' => time(),
+        'total_amount' => '1',
+        'subject' => 'test subject - 测试',
+    ]);
+});
