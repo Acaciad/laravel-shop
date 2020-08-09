@@ -29,20 +29,6 @@ class CouponCodesController extends Controller
         });
     }
 
-    /**
-     * Show interface.
-     *
-     * @param mixed   $id
-     * @param Content $content
-     * @return Content
-     */
-    public function show($id, Content $content)
-    {
-        return $content
-            ->header('Detail')
-            ->description('description')
-            ->body($this->detail($id));
-    }
 
     /**
      * Edit interface.
@@ -96,33 +82,7 @@ class CouponCodesController extends Controller
         });
     }
 
-    /**
-     * Make a show builder.
-     *
-     * @param mixed   $id
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        $show = new Show(CouponCode::findOrFail($id));
-
-        $show->id('Id');
-        $show->name('Name');
-        $show->code('Code');
-        $show->type('Type');
-        $show->value('Value');
-        $show->total('Total');
-        $show->used('Used');
-        $show->min_amount('Min amount');
-        $show->not_before('Not before');
-        $show->not_after('Not after');
-        $show->enabled('Enabled');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
-
-        return $show;
-    }
-
+    
     /**
      * Make a form builder.
      *
