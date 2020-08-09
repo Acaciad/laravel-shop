@@ -31,14 +31,7 @@ Route::post('orders', 'OrdersController@store')->name('orders.store');
 Route::get('orders', 'OrdersController@index')->name('orders.index');
 Route::get('orders/{order}', 'OrdersController@show')->name('orders.show');
 
-//支付
-Route::get('alipay', function() {
-    return app('alipay')->web([
-        'out_trade_no' => time(),
-        'total_amount' => '1',
-        'subject' => 'test subject - 测试',
-    ]);
-});
+
 Route::get('payment/{order}/alipay', 'PaymentController@payByAlipay')->name('payment.alipay');
 //支付宝支付
 Route::get('payment/alipay/return', 'PaymentController@alipayReturn')->name('payment.alipay.return');
@@ -46,3 +39,8 @@ Route::post('payment/alipay/notify', 'PaymentController@alipayNotify')->name('pa
 //微信支付
 Route::get('payment/{order}/wechat', 'PaymentController@payByWechat')->name('payment.wechat');
 Route::post('payment/wechat/notify', 'PaymentController@wechatNotify')->name('payment.wechat.notify');
+
+Route::post('orders/{order}/received', 'OrdersController@received')->name('orders.received');
+//评价
+Route::get('orders/{order}/review', 'OrdersController@review')->name('orders.review.show');
+Route::post('orders/{order}/review', 'OrdersController@sendReview')->name('orders.review.store');
