@@ -3,22 +3,15 @@
 namespace App\Policies;
 
 use App\User;
-use Illuminate\Auth\Access\HandlesAuthorization;
 use App\Models\UserAddress;
+use Illuminate\Auth\Access\HandlesAuthorization;
+
 class UserAddressPolicy
 {
     use HandlesAuthorization;
 
-    /**
-     * Create a new policy instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        public function own(User $user, UserAddress $address)
+    public function own(User $user, UserAddress $address)
     {
         return $address->user_id == $user->id;
-    }
     }
 }
