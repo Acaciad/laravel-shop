@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
+use App\Events\OrderReviewd;
 use App\Http\Requests\OrderRequest;
 use Illuminate\Http\Request;
 use App\Models\ProductSku;
@@ -13,11 +12,11 @@ use Carbon\Carbon;
 use App\Exceptions\InvalidRequestException;
 use App\Jobs\CloseOrder;
 use App\Http\Requests\SendReviewRequest;
-use App\Events\OrderReviewd;
 use App\Services\OrderService;
 use App\Http\Requests\ApplyRefundRequest;
 use App\Exceptions\CouponCodeUnavailableException;
 use App\Models\CouponCode;
+
 
 class OrdersController extends Controller
 {
@@ -84,7 +83,7 @@ class OrdersController extends Controller
         return view('orders.review', ['order' => $order->load(['items.productSku', 'items.product'])]);
     }
 
-    public function sendReview(Order $order, SendReviewRequest $request)
+     public function sendReview(Order $order, SendReviewRequest $request)
     {
         // 校验权限
         $this->authorize('own', $order);
@@ -110,7 +109,7 @@ class OrdersController extends Controller
             }
             // 将订单标记为已评价
             $order->update(['reviewed' => true]);
-            event(new OrderReviewed($order));
+            event(new OrderReviewd($order));
         });
 
         return redirect()->back();
