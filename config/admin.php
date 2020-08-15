@@ -5,12 +5,12 @@ return [
     /*
      * 站点标题
      */
-    'name' => 'Laravel Shop',
+    'name' => '贫困地区农副产品网络销售平台',
 
     /*
      * 页面顶部 Logo
      */
-    'logo' => '<b>Laravel</b> Shop',
+    'logo' => '贫困地区农副产品网络销售平台',
 
     /*
      * 页面顶部小 Logo
@@ -37,7 +37,7 @@ return [
     /*
      * Laravel-Admin 页面标题
      */
-    'title' => 'Laravel Shop 管理后台',
+    'title' => '贫困地区农副产品网络销售平台 管理后台',
 
     /*
      * 是否使用 https

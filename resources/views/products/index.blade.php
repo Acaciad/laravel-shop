@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', '商品列表')
-
+@include('banner._banner')
 @section('content')
 <div class="row">
 <div class="col-lg-10 col-lg-offset-1">

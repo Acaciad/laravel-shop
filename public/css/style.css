@@ -1,0 +1,116 @@
+.login_big_banner {   
+    height: 400px;
+    width: 100%;
+    background-color: #fff;
+
+}
+.login_box_bg {
+    position: absolute;
+    right: 120px;
+    width: 330px;
+    height: 400px;
+    background: #000;   
+    padding: 0 10px;
+    filter: alpha(opacity=60); 
+    opacity: 0.6;
+}
+.panel-default > .b{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #000;
+
+}
+
+.b {
+	background: #000;
+	border: none;
+}
+
+nav ul li{
+    list-style:none;   
+    height:28px;
+    line-height:28px;
+    text-align:center;
+}
+nav ul li a{
+    font-family:"微软雅黑";
+    font-size:14px;
+    color:#fff;
+    text-decoration:none;
+}
+nav ul li a:hover{
+    color: #333;
+    text-decoration:none;
+}
+
+nav .hid li{
+    border:none;
+    width: 100px;
+    background:rgba(10,5,5,0.4);
+}
+nav .hid li:hover{
+    background:rgba(10,5,5,0.6);
+    color: #333;
+}
+
+nav .hid1{
+    height:0px;
+    overflow:hidden;
+    transition:.5s;} /*把高度设置为0，hover后改变高度，并且设置出来后的速度 */
+nav ul li:hover .hid1{
+    height:200px;
+}
+
+@-webkit-keyframes aa{ /*写一个动画函数*/
+    from{-webkit-transform:rotateY(0deg);
+    }
+    to{-webkit-transform:rotateY(360deg);
+    }
+}
+
+.top img{
+    height: 120px;
+    width: 235px;
+    padding: 0px 8px 12px 0;
+}
+
+.search_box {
+    height: 40px;
+    width: 380px;
+    border: 2px solid #ff2f03;
+    border-radius: 5px 0 0 5px;
+    margin-top: 5px;
+}
+.search-s {
+    color: #e52e2d;
+    padding-left: 28px;
+    font-size: 16px;
+}
+.search_btn {
+    float: right;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff2f03;
+    border: none;
+}
+.form-control{    
+    font-size: 14px;
+    font-weight: 400;  
+    color: lightgray;
+    border: none;
+}
+.hot_search_nav {
+    position: absolute;
+    
+    top: 68px;
+    color: #999;
+    font-size: 12px;
+}
+
+

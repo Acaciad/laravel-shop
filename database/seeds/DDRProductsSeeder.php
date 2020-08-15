@@ -153,4 +153,4 @@ class DDRProductsSeeder extends Seeder
             }
         }
     }
-}
+} 

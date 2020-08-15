@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ url('') }}">
-                Laravel Shop
+                欢迎来到贫困地区农副产品网络销售平台！
             </a>
         </div>
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -25,12 +25,32 @@
                   </li>
                 @endif
                 <!-- 顶部类目菜单结束 -->
+                <li>
+                        <a href="#">采购中心</a>
+                    </li>
+                    <li>
+                        <a href="#">收藏夹</a>
+                        <ul class="hid hid1"> 
+                            <li><a href="">收藏商品</a></li>
+                            <li><a href="">收藏店铺</a></li>
+                        </ul>
+                    </li>                    
+                    <li>
+                        <a href="#">帮助中心</a>
+                        <ul class="hid hid1"> 
+                            <li><a href="">关于我们</a></li>
+                            <li><a href="">政策文件</a></li>            
+                        </ul>
+                    </li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
                 <!-- 登录注册链接开始 -->
                 @guest
+                    
                     <li><a href="{{ route('login') }}">登录</a></li>
                     <li><a href="{{ route('register') }}">注册</a></li>
+
                 @else
                     <li>
                         <a href="{{ route('cart.index') }}"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
